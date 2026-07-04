@@ -1,0 +1,30 @@
+{
+  "version": "0.1.0",
+  "values": [
+    {
+      "id": "official_site",
+      "label": "Official site",
+      "description": "Primary website controlled by the entity."
+    },
+    {
+      "id": "press_release",
+      "label": "Press release",
+      "description": "Official announcement distributed for publication."
+    },
+    {
+      "id": "news_article",
+      "label": "News article",
+      "description": "Third-party editorial reporting."
+    },
+    {
+      "id": "database",
+      "label": "Database",
+      "description": "Structured public or private reference dataset."
+    },
+    {
+      "id": "internal_note",
+      "label": "Internal note",
+      "description": "Human editorial note or research memo."
+    }
+  ]
+}

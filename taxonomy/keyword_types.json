@@ -1,0 +1,30 @@
+{
+  "version": "0.1.0",
+  "values": [
+    {
+      "id": "primary",
+      "label": "Primary",
+      "description": "Main target keyword for an article or entity."
+    },
+    {
+      "id": "secondary",
+      "label": "Secondary",
+      "description": "Supporting keyword."
+    },
+    {
+      "id": "entity",
+      "label": "Entity",
+      "description": "Keyword that names a known entity."
+    },
+    {
+      "id": "question",
+      "label": "Question",
+      "description": "Search query phrased as a question."
+    },
+    {
+      "id": "intent",
+      "label": "Intent",
+      "description": "Keyword representing user intent or journey stage."
+    }
+  ]
+}

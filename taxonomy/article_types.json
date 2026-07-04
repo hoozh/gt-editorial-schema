@@ -1,0 +1,30 @@
+{
+  "version": "0.1.0",
+  "values": [
+    {
+      "id": "guide",
+      "label": "Guide",
+      "description": "Evergreen educational article."
+    },
+    {
+      "id": "review",
+      "label": "Review",
+      "description": "Evaluation of a product, brand, or experience."
+    },
+    {
+      "id": "news",
+      "label": "News",
+      "description": "Time-sensitive report."
+    },
+    {
+      "id": "comparison",
+      "label": "Comparison",
+      "description": "Article comparing two or more entities."
+    },
+    {
+      "id": "profile",
+      "label": "Profile",
+      "description": "Article centered on one person, brand, event, or topic."
+    }
+  ]
+}

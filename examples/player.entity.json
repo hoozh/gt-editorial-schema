@@ -1,0 +1,14 @@
+{
+  "id": "person:example-player",
+  "type": "person",
+  "name": "Example Player",
+  "slug": "example-player",
+  "aliases": [],
+  "summary": "Reusable placeholder for a poker player entity.",
+  "status": "draft",
+  "attributes": {
+    "role": "poker_player"
+  },
+  "source_ids": ["source:internal-player-note"],
+  "updated_at": "2026-07-04T00:00:00Z"
+}

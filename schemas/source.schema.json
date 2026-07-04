@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gt-editorial-schema.local/schemas/source.schema.json",
+  "title": "Editorial Source",
+  "description": "Shared contract for source references used to support entities and relationships.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "type", "title"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-_.:]+$"
+    },
+    "type": {
+      "type": "string",
+      "description": "Must match taxonomy/source_types.json."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

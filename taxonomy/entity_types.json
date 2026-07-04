@@ -1,0 +1,35 @@
+{
+  "version": "0.1.0",
+  "values": [
+    {
+      "id": "brand",
+      "label": "Brand",
+      "description": "Commercial or editorial brand."
+    },
+    {
+      "id": "event",
+      "label": "Event",
+      "description": "Tournament, series, conference, or time-bound event."
+    },
+    {
+      "id": "person",
+      "label": "Person",
+      "description": "Player, executive, author, expert, or public figure."
+    },
+    {
+      "id": "topic",
+      "label": "Topic",
+      "description": "Reusable editorial concept or subject area."
+    },
+    {
+      "id": "product",
+      "label": "Product",
+      "description": "Tool, app, game, offer, or concrete commercial product."
+    },
+    {
+      "id": "market",
+      "label": "Market",
+      "description": "Country, region, audience, language, or regulatory market."
+    }
+  ]
+}

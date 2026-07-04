@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gt-editorial-schema.local/schemas/export_bundle.schema.json",
+  "title": "Editorial Export Bundle",
+  "description": "Portable bundle for moving editorial entities, relationships, sources, and taxonomy metadata between systems.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_by", "generated_at", "entities"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "generated_by": {
+      "type": "string",
+      "description": "Project or process that produced the bundle."
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "taxonomy_version": {
+      "type": "string"
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "$ref": "./entities.schema.json"
+      },
+      "default": []
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "./relationships.schema.json"
+      },
+      "default": []
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "./source.schema.json"
+      },
+      "default": []
+    }
+  }
+}

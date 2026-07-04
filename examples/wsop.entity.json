@@ -1,0 +1,15 @@
+{
+  "id": "event:wsop",
+  "type": "event",
+  "name": "World Series of Poker",
+  "slug": "world-series-of-poker",
+  "aliases": ["WSOP"],
+  "summary": "Major live poker tournament series used as an anchor entity for poker content.",
+  "status": "active",
+  "attributes": {
+    "short_name": "WSOP",
+    "category": "live_poker_series"
+  },
+  "source_ids": ["source:wsop-official"],
+  "updated_at": "2026-07-04T00:00:00Z"
+}

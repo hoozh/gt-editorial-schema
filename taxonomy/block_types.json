@@ -1,0 +1,35 @@
+{
+  "version": "0.1.0",
+  "values": [
+    {
+      "id": "summary",
+      "label": "Summary",
+      "description": "Short factual overview."
+    },
+    {
+      "id": "fact_box",
+      "label": "Fact box",
+      "description": "Compact list of facts."
+    },
+    {
+      "id": "timeline",
+      "label": "Timeline",
+      "description": "Ordered sequence of dated events."
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "description": "Question and answer block."
+    },
+    {
+      "id": "comparison",
+      "label": "Comparison",
+      "description": "Structured comparison between entities."
+    },
+    {
+      "id": "source_note",
+      "label": "Source note",
+      "description": "Short note explaining evidence or uncertainty."
+    }
+  ]
+}

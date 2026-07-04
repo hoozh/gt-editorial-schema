@@ -1,0 +1,35 @@
+{
+  "version": "0.1.0",
+  "values": [
+    {
+      "id": "owns",
+      "label": "Owns",
+      "description": "Entity has ownership or stewardship over another entity."
+    },
+    {
+      "id": "participates_in",
+      "label": "Participates in",
+      "description": "Person, brand, or product participates in an event or topic."
+    },
+    {
+      "id": "sponsors",
+      "label": "Sponsors",
+      "description": "Entity sponsors another entity, event, or initiative."
+    },
+    {
+      "id": "related_to",
+      "label": "Related to",
+      "description": "General editorial relationship when a tighter type is not justified."
+    },
+    {
+      "id": "competes_with",
+      "label": "Competes with",
+      "description": "Entities operate in overlapping markets or topics."
+    },
+    {
+      "id": "mentions",
+      "label": "Mentions",
+      "description": "Source or entity references another entity."
+    }
+  ]
+}

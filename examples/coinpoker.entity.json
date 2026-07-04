@@ -1,0 +1,15 @@
+{
+  "id": "brand:coinpoker",
+  "type": "brand",
+  "name": "CoinPoker",
+  "slug": "coinpoker",
+  "aliases": ["Coin Poker"],
+  "summary": "Online poker brand often discussed in crypto poker and tournament content.",
+  "status": "active",
+  "attributes": {
+    "category": "online_poker",
+    "uses_crypto_positioning": true
+  },
+  "source_ids": ["source:coinpoker-official"],
+  "updated_at": "2026-07-04T00:00:00Z"
+}

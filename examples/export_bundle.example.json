@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1.0",
+  "generated_by": "GHS-intelligence",
+  "generated_at": "2026-07-04T00:00:00Z",
+  "taxonomy_version": "0.1.0",
+  "entities": [
+    {
+      "id": "brand:coinpoker",
+      "type": "brand",
+      "name": "CoinPoker",
+      "slug": "coinpoker",
+      "aliases": ["Coin Poker"],
+      "summary": "Online poker brand often discussed in crypto poker and tournament content.",
+      "status": "active",
+      "attributes": {
+        "category": "online_poker",
+        "uses_crypto_positioning": true
+      },
+      "source_ids": ["source:coinpoker-official"],
+      "updated_at": "2026-07-04T00:00:00Z"
+    },
+    {
+      "id": "event:wsop",
+      "type": "event",
+      "name": "World Series of Poker",
+      "slug": "world-series-of-poker",
+      "aliases": ["WSOP"],
+      "summary": "Major live poker tournament series used as an anchor entity for poker content.",
+      "status": "active",
+      "attributes": {
+        "short_name": "WSOP",
+        "category": "live_poker_series"
+      },
+      "source_ids": ["source:wsop-official"],
+      "updated_at": "2026-07-04T00:00:00Z"
+    },
+    {
+      "id": "topic:crypto-poker",
+      "type": "topic",
+      "name": "Crypto poker",
+      "slug": "crypto-poker",
+      "aliases": ["Bitcoin poker"],
+      "summary": "Editorial topic covering poker products, payments, and audiences connected to cryptocurrency.",
+      "status": "active",
+      "attributes": {
+        "article_type_fit": ["guide", "comparison", "review"]
+      },
+      "source_ids": [],
+      "updated_at": "2026-07-04T00:00:00Z"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel:coinpoker-crypto-poker",
+      "type": "related_to",
+      "from_entity_id": "brand:coinpoker",
+      "to_entity_id": "topic:crypto-poker",
+      "confidence": 0.8,
+      "source_ids": ["source:coinpoker-official"],
+      "notes": "CoinPoker is commonly treated as part of crypto poker coverage.",
+      "updated_at": "2026-07-04T00:00:00Z"
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:coinpoker-official",
+      "type": "official_site",
+      "title": "CoinPoker official website",
+      "url": "https://coinpoker.com/",
+      "publisher": "CoinPoker",
+      "retrieved_at": "2026-07-04T00:00:00Z"
+    },
+    {
+      "id": "source:wsop-official",
+      "type": "official_site",
+      "title": "WSOP official website",
+      "url": "https://www.wsop.com/",
+      "publisher": "World Series of Poker",
+      "retrieved_at": "2026-07-04T00:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gt-editorial-schema.local/schemas/entities.schema.json",
+  "title": "Editorial Entity",
+  "description": "Shared contract for editorial entities discovered by GHS and reused by BiBLIO and WRITY.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "type", "name", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-_.:]+$",
+      "examples": ["brand:coinpoker"]
+    },
+    "type": {
+      "type": "string",
+      "description": "Must match taxonomy/entity_types.json."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short editorial summary, not generated copy."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "deprecated", "archived"]
+    },
+    "attributes": {
+      "type": "object",
+      "description": "Small typed facts that are useful across projects.",
+      "additionalProperties": {
+        "type": ["string", "number", "boolean", "array", "object", "null"]
+      },
+      "default": {}
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
