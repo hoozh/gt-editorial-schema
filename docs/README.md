@@ -11,6 +11,10 @@ It does not discover entities, index knowledge, or write content. It only define
 - `examples/`: small reusable examples for fixtures, tests, and onboarding.
 - `docs/`: human documentation for project boundaries and integration.
 
+## Architecture reference
+
+- `EDITORIAL_KNOWLEDGE_GRAPH.md`: future-facing reference for evolving the contract toward an Editorial Knowledge Graph while keeping this repository lightweight and implementation-neutral.
+
 ## Contract flow
 
 1. GHS-intelligence discovers entities, relationships, and supporting sources.
