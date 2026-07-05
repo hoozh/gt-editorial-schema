@@ -1,0 +1,56 @@
+{
+  "fixture": true,
+  "description": "Demo: internal room review normalized by BiBLIO into stable memory.",
+  "source_refs": [
+    {
+      "id": "source:demo-internal-coinpoker-review",
+      "type": "internal_review",
+      "title": "Demo internal CoinPoker review",
+      "original_location": "Referencias/salas/coinpoker-review.md#payments",
+      "human_review_status": "reviewed",
+      "notes": "Demo fixture, not real review content."
+    }
+  ],
+  "editorial_entities": [
+    {
+      "id": "brand:coinpoker",
+      "type": "brand",
+      "name": "CoinPoker",
+      "slug": "coinpoker",
+      "aliases": ["Coin Poker"],
+      "summary": "Poker room entity used in demo fixtures.",
+      "status": "active",
+      "attributes": {
+        "niche": "poker",
+        "memory_owner": "BiBLIO"
+      },
+      "source_ids": ["source:demo-internal-coinpoker-review"],
+      "updated_at": "2026-07-04T00:00:00Z"
+    }
+  ],
+  "reusable_notes": [
+    {
+      "id": "note:demo-coinpoker-payment-context",
+      "object_type": "reusable_note",
+      "producer": "BiBLIO",
+      "title": "Payment context for CoinPoker",
+      "entity_id": "brand:coinpoker",
+      "source_ids": ["source:demo-internal-coinpoker-review"],
+      "payload": {
+        "note_type": "stable_context",
+        "summary": "Payments are a recurring editorial angle for CoinPoker coverage.",
+        "recommended_use": "Use as context, not as final copy."
+      },
+      "audit": {
+        "source_id": "source:demo-internal-coinpoker-review",
+        "source_type": "internal_review",
+        "original_location": "Referencias/salas/coinpoker-review.md#payments",
+        "extraction_date": "2026-07-04",
+        "transformation_step": "reusable_note",
+        "confidence": 0.8,
+        "human_review_status": "reviewed",
+        "notes": "Stable memory should enrich the entity before creating new entities."
+      }
+    }
+  ]
+}

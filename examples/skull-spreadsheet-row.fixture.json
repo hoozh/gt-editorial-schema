@@ -1,0 +1,99 @@
+{
+  "fixture": true,
+  "description": "Demo: spreadsheet row normalized by SKULL into an editorial requirement and skeleton decision.",
+  "source_packets": [
+    {
+      "id": "packet:demo-spreadsheet-row-1",
+      "object_type": "source_packet",
+      "producer": "SKULL",
+      "title": "Demo spreadsheet row for CoinPoker review",
+      "payload": {
+        "input_kind": "spreadsheet_row",
+        "row_label": "Structure",
+        "raw_instruction": "Include payment methods and app support in the review."
+      },
+      "audit": {
+        "source_id": "source:demo-spreadsheet-row-1",
+        "source_type": "spreadsheet_row",
+        "original_location": "demo.xlsx#Structure!A12:C12",
+        "extraction_date": "2026-07-04",
+        "transformation_step": "source_packet",
+        "confidence": 1,
+        "human_review_status": "pending",
+        "notes": "Demo fixture, not real spreadsheet data."
+      }
+    }
+  ],
+  "editorial_requirements": [
+    {
+      "id": "req:demo-coinpoker-payments-app",
+      "object_type": "editorial_requirement",
+      "producer": "SKULL",
+      "title": "Cover payments and app support",
+      "source_ids": ["source:demo-spreadsheet-row-1"],
+      "payload": {
+        "requirement_type": "coverage",
+        "target_entity_id": "brand:coinpoker",
+        "must_cover": ["payment_methods", "mobile_app_support"]
+      },
+      "audit": {
+        "source_id": "source:demo-spreadsheet-row-1",
+        "source_type": "spreadsheet_row",
+        "original_location": "demo.xlsx#Structure!A12:C12",
+        "extraction_date": "2026-07-04",
+        "transformation_step": "editorial_requirement",
+        "confidence": 0.9,
+        "human_review_status": "pending",
+        "notes": "Requirement extracted from a demo spreadsheet instruction."
+      }
+    }
+  ],
+  "content_blocks": [
+    {
+      "id": "block:demo-payments-app",
+      "object_type": "content_block",
+      "producer": "SKULL",
+      "title": "Payments and app support",
+      "source_ids": ["source:demo-spreadsheet-row-1"],
+      "payload": {
+        "block_type": "fact_box",
+        "suggested_h2": "Payments and mobile app",
+        "purpose": "Normalize the coverage requested by the spreadsheet before WRITY consumes it."
+      },
+      "audit": {
+        "source_id": "source:demo-spreadsheet-row-1",
+        "source_type": "spreadsheet_row",
+        "original_location": "demo.xlsx#Structure!A12:C12",
+        "extraction_date": "2026-07-04",
+        "transformation_step": "content_block",
+        "confidence": 0.85,
+        "human_review_status": "pending",
+        "notes": "Demo block derived from the editorial requirement."
+      }
+    }
+  ],
+  "skeleton_decisions": [
+    {
+      "id": "decision:demo-payment-block",
+      "object_type": "skeleton_decision",
+      "producer": "SKULL",
+      "title": "Add payments and app block",
+      "source_ids": ["source:demo-spreadsheet-row-1"],
+      "payload": {
+        "decision": "create_content_block",
+        "block_id": "block:demo-payments-app",
+        "reason": "Spreadsheet explicitly asks for payment methods and app support."
+      },
+      "audit": {
+        "source_id": "source:demo-spreadsheet-row-1",
+        "source_type": "spreadsheet_row",
+        "original_location": "demo.xlsx#Structure!A12:C12",
+        "extraction_date": "2026-07-04",
+        "transformation_step": "skeleton_decision",
+        "confidence": 0.85,
+        "human_review_status": "pending",
+        "notes": "Decision remains reviewable by an editor."
+      }
+    }
+  ]
+}

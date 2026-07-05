@@ -1,0 +1,80 @@
+{
+  "fixture": true,
+  "description": "Demo: fresh external signal normalized by GHS into evidence, freshness, and audit.",
+  "freshness_signals": [
+    {
+      "id": "signal:demo-coinpoker-promo-update",
+      "object_type": "freshness_signal",
+      "producer": "GHS",
+      "title": "Demo promo page changed",
+      "entity_id": "brand:coinpoker",
+      "source_ids": ["source:demo-external-promo-page"],
+      "payload": {
+        "signal_type": "page_update",
+        "observed_change": "Promotion page appears to have changed.",
+        "recommended_action": "Send to review before updating stable memory."
+      },
+      "audit": {
+        "source_id": "source:demo-external-promo-page",
+        "source_type": "external_signal",
+        "original_location": "https://example.com/demo-promo",
+        "extraction_date": "2026-07-04",
+        "transformation_step": "freshness_signal",
+        "confidence": 0.65,
+        "stale_after": "2026-08-03",
+        "human_review_status": "pending",
+        "notes": "Demo fixture. Freshness signals do not replace BiBLIO stable memory."
+      }
+    }
+  ],
+  "evidence_items": [
+    {
+      "id": "evidence:demo-promo-page-title",
+      "object_type": "evidence_item",
+      "producer": "GHS",
+      "title": "Observed promo page title",
+      "entity_id": "brand:coinpoker",
+      "source_ids": ["source:demo-external-promo-page"],
+      "payload": {
+        "claim_type": "observed_text",
+        "claim": "The demo promotion page title changed."
+      },
+      "audit": {
+        "source_id": "source:demo-external-promo-page",
+        "source_type": "external_signal",
+        "original_location": "https://example.com/demo-promo#title",
+        "extraction_date": "2026-07-04",
+        "transformation_step": "evidence_item",
+        "confidence": 0.7,
+        "stale_after": "2026-08-03",
+        "human_review_status": "pending",
+        "notes": "Evidence is punctual and reviewable."
+      }
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": "audit:demo-ghs-promo-signal",
+      "object_type": "audit_log",
+      "producer": "GHS",
+      "title": "GHS demo signal audit",
+      "source_ids": ["source:demo-external-promo-page"],
+      "payload": {
+        "input": "fresh external signal",
+        "output": ["freshness_signal", "evidence_item"],
+        "status": "pending_human_review"
+      },
+      "audit": {
+        "source_id": "source:demo-external-promo-page",
+        "source_type": "external_signal",
+        "original_location": "https://example.com/demo-promo",
+        "extraction_date": "2026-07-04",
+        "transformation_step": "audit_log",
+        "confidence": 0.7,
+        "stale_after": "2026-08-03",
+        "human_review_status": "pending",
+        "notes": "Audit trail for a demo GHS transformation."
+      }
+    }
+  ]
+}

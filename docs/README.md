@@ -1,12 +1,12 @@
 # gt-editorial-schema
 
-`gt-editorial-schema` is a small shared editorial contract for GHS-intelligence, BiBLIO, and WRITY.
+`gt-editorial-schema` is a small shared editorial contract for SKULL, GHS-intelligence, BiBLIO, and WRITY.
 
-It does not discover entities, index knowledge, or write content. It only defines the portable shapes, taxonomies, examples, and integration notes that the three projects can agree on.
+It does not discover entities, index knowledge, make content decisions, or write content. It only defines the portable shapes, taxonomies, examples, and integration notes that the ecosystem can agree on.
 
 ## What is included
 
-- `schemas/`: JSON Schemas for entities, relationships, sources, and export bundles.
+- `schemas/`: JSON Schemas for entities, relationships, sources, Phase 1 editorial objects, and export bundles.
 - `taxonomy/`: shared controlled vocabularies for editorial systems.
 - `examples/`: small reusable examples for fixtures, tests, and onboarding.
 - `docs/`: human documentation for project boundaries and integration.
@@ -14,13 +14,15 @@ It does not discover entities, index knowledge, or write content. It only define
 ## Architecture reference
 
 - `EDITORIAL_KNOWLEDGE_GRAPH.md`: future-facing reference for evolving the contract toward an Editorial Knowledge Graph while keeping this repository lightweight and implementation-neutral.
+- `contract-overview.md`: Phase 1 overview for how SKULL, BiBLIO, and GHS normalize different inputs into the same auditable language.
 
 ## Contract flow
 
-1. GHS-intelligence discovers entities, relationships, and supporting sources.
-2. GHS-intelligence exports an `export_bundle`.
-3. BiBLIO imports the bundle and indexes the entities into its knowledge base.
-4. WRITY reads trusted entities and relationships to write with better context.
+1. SKULL converts spreadsheets, skeletons, and reference articles into `editorial_requirement`, `content_block`, and `skeleton_decision` objects.
+2. BiBLIO converts internal reviews, finished articles, and editorial references into `editorial_entity`, `reusable_note`, and `source_ref` objects.
+3. GHS converts fresh external signals into `freshness_signal`, `evidence_item`, and `audit_log` objects.
+4. The schema normalizes those objects into portable bundles.
+5. WRITY consumes clean normalized context after it has been structured upstream.
 
 ## Stability
 
