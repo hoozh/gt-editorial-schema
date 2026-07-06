@@ -25,6 +25,26 @@
       "id": "internal_note",
       "label": "Internal note",
       "description": "Human editorial note or research memo."
+    },
+    {
+      "id": "spreadsheet_row",
+      "label": "Spreadsheet row",
+      "description": "Row or cell range from an editorial spreadsheet."
+    },
+    {
+      "id": "internal_review",
+      "label": "Internal review",
+      "description": "Internal room review or editorial reference article."
+    },
+    {
+      "id": "finished_article",
+      "label": "Finished article",
+      "description": "Published or completed editorial article."
+    },
+    {
+      "id": "external_signal",
+      "label": "External signal",
+      "description": "Fresh external source used by GHS for currency or evidence."
     }
   ]
 }

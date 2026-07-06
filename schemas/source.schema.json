@@ -34,6 +34,14 @@
       "type": "string",
       "format": "date-time"
     },
+    "original_location": {
+      "type": "string",
+      "description": "File path, URL, spreadsheet cell, section heading, or other source location."
+    },
+    "human_review_status": {
+      "type": "string",
+      "enum": ["pending", "reviewed", "approved", "rejected"]
+    },
     "notes": {
       "type": "string"
     }
