@@ -7,7 +7,7 @@ The contract answers one question: how does editorial knowledge travel in a smal
 ## Flow
 
 ```text
-SKULL + BiBLIO + GHS -> SCHEMA -> WRITY
+SKULL + BIBLIO + GHS -> SCHEMA -> WRITY
 ```
 
 ## Roles
@@ -24,9 +24,9 @@ It may produce:
 
 SKULL does not write final articles.
 
-### BiBLIO
+### BIBLIO
 
-BiBLIO converts internal reviews, finished articles, and editorial references into stable memory.
+BIBLIO converts internal reviews, finished articles, and editorial references into stable memory.
 
 It may produce:
 
@@ -34,7 +34,7 @@ It may produce:
 - `reusable_note`
 - `source_ref`
 
-BiBLIO preserves traceability back to internal references and enriches existing entities before suggesting new ones.
+BIBLIO preserves traceability back to internal references and enriches existing entities before suggesting new ones.
 
 ### GHS
 
@@ -46,7 +46,7 @@ It may produce:
 - `evidence_item`
 - `audit_log`
 
-GHS enriches entities without replacing BiBLIO's stable editorial memory.
+GHS enriches entities without replacing BIBLIO's stable editorial memory.
 
 ### SCHEMA
 
@@ -66,7 +66,7 @@ WRITY consumes clean normalized context. It should not process massive memory, r
 - `content_block`: normalized editorial block.
 - `skeleton_decision`: structural decision made by SKULL.
 - `freshness_signal`: current signal contributed by GHS.
-- `reusable_note`: stable knowledge preserved by BiBLIO.
+- `reusable_note`: stable knowledge preserved by BIBLIO.
 - `audit_log`: minimal trail of origin, date, confidence, and transformation.
 
 ## Minimal Audit Fields
