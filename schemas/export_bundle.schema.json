@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gt-editorial-schema.local/schemas/export_bundle.schema.json",
   "title": "Editorial Export Bundle",
-  "description": "Portable bundle for moving editorial entities, relationships, sources, and taxonomy metadata between systems.",
+  "description": "Portable bundle for moving editorial entities, relationships, sources, Phase 1 editorial objects, and taxonomy metadata between systems.",
   "type": "object",
   "additionalProperties": false,
   "required": ["schema_version", "generated_by", "generated_at", "entities"],
@@ -29,6 +29,14 @@
       },
       "default": []
     },
+    "editorial_entities": {
+      "type": "array",
+      "description": "Phase 1 alias for reusable editorial entities. Compatible with entities.",
+      "items": {
+        "$ref": "./entities.schema.json"
+      },
+      "default": []
+    },
     "relationships": {
       "type": "array",
       "items": {
@@ -40,6 +48,70 @@
       "type": "array",
       "items": {
         "$ref": "./source.schema.json"
+      },
+      "default": []
+    },
+    "source_refs": {
+      "type": "array",
+      "description": "Phase 1 alias for verifiable source references. Compatible with sources.",
+      "items": {
+        "$ref": "./source.schema.json"
+      },
+      "default": []
+    },
+    "source_packets": {
+      "type": "array",
+      "items": {
+        "$ref": "./editorial_objects.schema.json"
+      },
+      "default": []
+    },
+    "evidence_items": {
+      "type": "array",
+      "items": {
+        "$ref": "./editorial_objects.schema.json"
+      },
+      "default": []
+    },
+    "editorial_requirements": {
+      "type": "array",
+      "items": {
+        "$ref": "./editorial_objects.schema.json"
+      },
+      "default": []
+    },
+    "content_blocks": {
+      "type": "array",
+      "items": {
+        "$ref": "./editorial_objects.schema.json"
+      },
+      "default": []
+    },
+    "skeleton_decisions": {
+      "type": "array",
+      "items": {
+        "$ref": "./editorial_objects.schema.json"
+      },
+      "default": []
+    },
+    "freshness_signals": {
+      "type": "array",
+      "items": {
+        "$ref": "./editorial_objects.schema.json"
+      },
+      "default": []
+    },
+    "reusable_notes": {
+      "type": "array",
+      "items": {
+        "$ref": "./editorial_objects.schema.json"
+      },
+      "default": []
+    },
+    "audit_logs": {
+      "type": "array",
+      "items": {
+        "$ref": "./editorial_objects.schema.json"
       },
       "default": []
     }

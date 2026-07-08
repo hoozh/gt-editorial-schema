@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gt-editorial-schema.local/schemas/editorial_objects.schema.json",
+  "title": "Phase 1 Editorial Objects",
+  "description": "Lightweight objects for moving auditable editorial knowledge between SKULL, BiBLIO, GHS, and WRITY.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "object_type", "audit"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-_.:]+$"
+    },
+    "object_type": {
+      "type": "string",
+      "enum": [
+        "source_packet",
+        "source_ref",
+        "evidence_item",
+        "editorial_entity",
+        "editorial_requirement",
+        "content_block",
+        "skeleton_decision",
+        "freshness_signal",
+        "reusable_note",
+        "audit_log"
+      ]
+    },
+    "producer": {
+      "type": "string",
+      "enum": ["SKULL", "BiBLIO", "GHS", "SCHEMA", "WRITY", "human"]
+    },
+    "title": {
+      "type": "string"
+    },
+    "entity_id": {
+      "type": "string"
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "payload": {
+      "type": "object",
+      "description": "Small object-specific data. Keep this portable and avoid application logic.",
+      "additionalProperties": {
+        "type": ["string", "number", "boolean", "array", "object", "null"]
+      },
+      "default": {}
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_type",
+        "original_location",
+        "extraction_date",
+        "transformation_step",
+        "confidence",
+        "human_review_status"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string"
+        },
+        "source_type": {
+          "type": "string"
+        },
+        "original_location": {
+          "type": "string"
+        },
+        "extraction_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "transformation_step": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "stale_after": {
+          "type": "string",
+          "format": "date"
+        },
+        "human_review_status": {
+          "type": "string",
+          "enum": ["pending", "reviewed", "approved", "rejected"]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

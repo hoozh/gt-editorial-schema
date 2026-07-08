@@ -1,0 +1,55 @@
+{
+  "version": "0.1.0",
+  "values": [
+    {
+      "id": "source_packet",
+      "label": "Source packet",
+      "description": "Raw input unit before editorial normalization."
+    },
+    {
+      "id": "source_ref",
+      "label": "Source reference",
+      "description": "Verifiable reference to an origin source."
+    },
+    {
+      "id": "evidence_item",
+      "label": "Evidence item",
+      "description": "Specific extracted claim, observation, or signal backed by a source."
+    },
+    {
+      "id": "editorial_entity",
+      "label": "Editorial entity",
+      "description": "Reusable niche entity compatible with the entity schema."
+    },
+    {
+      "id": "editorial_requirement",
+      "label": "Editorial requirement",
+      "description": "Requirement extracted from a spreadsheet, brief, or editorial instruction."
+    },
+    {
+      "id": "content_block",
+      "label": "Content block",
+      "description": "Normalized editorial block used for planning or writing context."
+    },
+    {
+      "id": "skeleton_decision",
+      "label": "Skeleton decision",
+      "description": "Structural decision made while preparing a skeleton."
+    },
+    {
+      "id": "freshness_signal",
+      "label": "Freshness signal",
+      "description": "Current external or recent signal that may update editorial context."
+    },
+    {
+      "id": "reusable_note",
+      "label": "Reusable note",
+      "description": "Stable editorial knowledge preserved for reuse."
+    },
+    {
+      "id": "audit_log",
+      "label": "Audit log",
+      "description": "Minimal transformation trail for review and traceability."
+    }
+  ]
+}
