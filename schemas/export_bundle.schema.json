@@ -114,6 +114,13 @@
         "$ref": "./editorial_objects.schema.json"
       },
       "default": []
+    },
+    "learning_packs": {
+      "type": "array",
+      "items": {
+        "$ref": "./learning_pack.schema.json"
+      },
+      "default": []
     }
   }
 }
